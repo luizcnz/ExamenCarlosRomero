@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2EX201730110111.Listado">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#000000">
+
+
+
+            <ListView x:Name="ListaUbicaciones" ItemSelected="ListaUbicaciones_ItemSelected"  RowHeight="150" BackgroundColor="#000000" SeparatorColor="#8D66F3">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Background="#1b1b1b" Padding="20,10,20,10">
+
+                                <Label Grid.Row="1"
+                                       TextColor="Aqua" Text="{Binding L_ID}" IsVisible="False" />
+
+                                <Label Grid.Row="1"  Grid.Column="0"
+                                       TextColor="Aqua" Text="{Binding L_Descripcion}" FontSize="16"/>
+
+                                <Label Grid.Row="1" Grid.Column="2"
+                                       TextColor="Aqua" Text="{Binding L_Desc_Corta}" FontSize="16"/>
+
+                                <Label Grid.Row="2" 
+                                       TextColor="Aqua" Text="{Binding L_Latitud}" IsVisible="False" />
+
+                                <Label Grid.Row="2" Grid.Column="2"
+                                       TextColor="Aqua" Text="{Binding L_Longitud}" IsVisible="False" />
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Margin="10,0">
+                <Label TextColor="Aqua" Text="Seleccion un elemento" x:Name="seleccionado" HorizontalOptions="Center" FontSize="25"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                    <Button  x:Name="Mapa" Text="Visualizar" 
+                                            BackgroundColor="#af95cf" Margin="10,0,10,0" FontSize="12" Clicked="Mapa_Clicked"/>
+
+                    <Button  x:Name="Borrar" Text="Borrar Datos" 
+                                            BackgroundColor="#af95cf" Margin="10,0,10,0" FontSize="12" Clicked="Borrar_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

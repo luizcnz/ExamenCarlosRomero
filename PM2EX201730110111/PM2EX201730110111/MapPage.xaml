@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM2EX201730110111.MapPage"
+             Title="Map">
+    
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+
+            <maps:Map 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                x:Name="mapa"
+                IsShowingUser="True">
+
+                
+
+            </maps:Map>
+
+            <StackLayout Padding="25,0,25,0" HorizontalOptions="Center">
+                <Label TextColor="Gray" Text="{Binding PEM_ID}" IsVisible="True" x:Name="M_ID" FontSize="14"/>
+
+                <Label TextColor="Gray" Text="{Binding PEM_Latitud}" IsVisible="True" x:Name="M_Lat" FontSize="14"/>
+
+                <Label TextColor="Gray" Text="{Binding PEM_Longitud}" IsVisible="True" x:Name="M_Lon" FontSize="14"/>
+
+                <Label TextColor="Gray" Text="{Binding PEM_Descripcion}" IsVisible="True" x:Name="M_Desc" FontSize="14"/>
+
+                <Label TextColor="Gray" Text="{Binding PEM_Desc_Corta}" IsVisible="True" x:Name="M_Desc_C" FontSize="14"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

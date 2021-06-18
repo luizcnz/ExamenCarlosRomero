@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2EX201730110111.MainPage">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Nueva Ubicacion" x:Name="x_nueva_u"
+            Order="Primary"
+            Priority="0"
+            Clicked="x_nueva_u_Clicked"/>
+
+        <ToolbarItem 
+            Text="Ver Ubicaciones" x:Name="x_ver_u"
+            Order="Primary"
+            Priority="0"
+            Clicked="x_ver_u_Clicked"/>
+
+        <ToolbarItem 
+            Text="Añadir Ubicaciones de Prueba" x:Name="Prueba"
+            Order="Secondary"
+            Priority="0"
+            Clicked="Prueba_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+    <StackLayout 
+        BackgroundColor="#1b1b1b">
+
+
+        <StackLayout BackgroundColor="#1b1b1b" Margin="30,20,30,0" >
+
+            <Frame BackgroundColor="#8034eb" Padding="10" CornerRadius="9" BorderColor="#000000">
+                <Label Text="UTH" HorizontalTextAlignment="Center" TextColor="White" FontSize="22"/>
+            </Frame>
+
+
+            <Label Text="Latitud" FontSize="18" Padding="10,50,30,5" TextColor="#af95cf"/>
+            <Entry FontSize="18"  TextColor="#85d0ff" x:Name="x_latitud" IsReadOnly="True"/>
+
+            <Label Text="Longitud" FontSize="18" Padding="10,10,30,5" TextColor="#af95cf"/>
+            <Entry FontSize="18"  TextColor="#85d0ff" x:Name="x_longitud" IsReadOnly="True"/>
+
+            
+
+            <Label Text="Describa la ubicacion" FontSize="18" Padding="10,10,30,5" TextColor="#af95cf"/>
+            <Entry FontSize="18"  TextColor="#85d0ff" x:Name="x_descripcion"/>
+
+            <Label Text="Agregue una descripcion corta" FontSize="18" Padding="10,10,30,5" TextColor="#af95cf"/>
+            <Entry FontSize="18"  TextColor="#85d0ff" x:Name="x_desc_corta"/>
+
+            <Label Text="" FontSize="10" Padding="10,10,10,10" TextColor="#af95cf"/>
+
+            <Button x:Name="btn_salvar"  
+                    Text="Salvar Ubicacion" 
+                    BackgroundColor="#af95cf" 
+                    Margin="70,0,70,0"
+                    FontSize="20" Clicked="btn_salvar_Clicked"/>
+
+                <Button x:Name="btn_lista"  
+                    Text="Ubicaciones Guardadas" 
+                    BackgroundColor="#af95cf" 
+                    Margin="70,0,70,0"
+                    FontSize="20" Clicked="btn_lista_Clicked"/>
+
+
+            </StackLayout>
+
+    </StackLayout>
+    </ScrollView>
+
+</ContentPage>
